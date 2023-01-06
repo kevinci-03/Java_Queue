@@ -1,5 +1,7 @@
 public class QueueArray {
 
+    /*Implements an efficient first-in first-out Abstract Data Type using a Java array */
+
     private int capacity;
     private int num_items = 0;
     private int front = 0;
@@ -13,19 +15,19 @@ public class QueueArray {
 
     }
 
-    public boolean isEmpty() {
+    public boolean isEmpty() {  // Time Complexity: O(1)
 
         return this.num_items == 0;
 
     }
 
-    public boolean isFull() {
+    public boolean isFull() {  // // Time Complexity: O(1)
 
         return this.num_items == this.capacity;
 
     }
 
-    public void enqueue(int item) {
+    public void enqueue(int item) {  // Time Complexity: O(1)
 
         if (this.isFull()) {
             throw new IndexOutOfBoundsException("Queue OverFlow");
@@ -36,7 +38,7 @@ public class QueueArray {
 
     }
 
-    public int dequeue() {
+    public int dequeue() {  // Time Complexity: O(1)
 
         if(this.isEmpty()) {
             throw new IndexOutOfBoundsException("Queue UnderFlow");
@@ -48,7 +50,7 @@ public class QueueArray {
 
     }
 
-    public int size() {
+    public int size() {  // Time Complexity: O(1)
 
         return this.num_items;
 
